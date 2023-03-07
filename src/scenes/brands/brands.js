@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import PieChart from '../../components/PieChart'
+import PieChart from '../../data/brandsPie'
 
 
 function Brands() {
@@ -11,7 +11,7 @@ function Brands() {
     const [brands, setBrands] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3030/apis/brands')
+        fetch('http://localhost:3030/apis/brands/countProducts')
             .then((response) => {
                 return response.json()
             })
@@ -29,7 +29,7 @@ function Brands() {
                     gridAutoRows="50px"
                     gap="10px"
                     textAlign="center"
-
+                    fontWeight="400"
                 >
                     <Box
                         gridColumn="span 3"
@@ -49,6 +49,7 @@ function Brands() {
                             gridTemplateColumns: "repeat(3, 1fr)",
                             gridAutoRows: "50px",
                             gap: "10px",
+                            fontSize: "20px"
                         }}>
                             <Box
                                 gridColumn="span 1"
@@ -83,7 +84,7 @@ function Brands() {
                             <>
                                 <Box
                                     gridColumn="span 1"
-                                    backgroundColor={colors.primary[200]}
+                                    backgroundColor={colors.primary[300]}
                                     display="flex"
                                     alignItems="center"
                                     justifyContent="center"
@@ -92,7 +93,7 @@ function Brands() {
                                 </Box>
                                 <Box
                                     gridColumn="span 1"
-                                    backgroundColor={colors.primary[200]}
+                                    backgroundColor={colors.primary[300]}
                                     display="flex"
                                     alignItems="center"
                                     justifyContent="center"
@@ -101,7 +102,7 @@ function Brands() {
                                 </Box>
                                 <Box
                                     gridColumn="span 1"
-                                    backgroundColor={colors.primary[200]}
+                                    backgroundColor={colors.primary[300]}
                                     display="flex"
                                     alignItems="center"
                                     justifyContent="center"

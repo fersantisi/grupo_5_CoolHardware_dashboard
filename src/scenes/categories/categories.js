@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import PieChart from '../../components/PieChart'
+import PieChart from '../../data/categoriesPie'
 
 
 function Categories() {
@@ -11,7 +11,7 @@ function Categories() {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3030/apis/categories')
+        fetch('http://localhost:3030/apis/categories/countProducts')
             .then((response) => {
                 return response.json()
             })
@@ -29,11 +29,11 @@ function Categories() {
                     gridAutoRows="50px"
                     gap="10px"
                     textAlign="center"
-
+                    fontWeight="400"
                 >
                     <Box
                         gridColumn="span 3"
-                        gridRow="span 9"
+                        gridRow="span 13"
                         display="grid"
                         gridTemplateColumns="repeat(3, 1fr)"
                         gridAutoRows="50px"
@@ -49,6 +49,7 @@ function Categories() {
                             gridTemplateColumns: "repeat(3, 1fr)",
                             gridAutoRows: "50px",
                             gap: "10px",
+                            fontSize: "20px"
                         }}>
                             <Box
                                 gridColumn="span 1"
@@ -83,7 +84,7 @@ function Categories() {
                             <>
                                 <Box
                                     gridColumn="span 1"
-                                    backgroundColor={colors.primary[200]}
+                                    backgroundColor={colors.primary[300]}
                                     display="flex"
                                     alignItems="center"
                                     justifyContent="center"
@@ -92,7 +93,7 @@ function Categories() {
                                 </Box>
                                 <Box
                                     gridColumn="span 1"
-                                    backgroundColor={colors.primary[200]}
+                                    backgroundColor={colors.primary[300]}
                                     display="flex"
                                     alignItems="center"
                                     justifyContent="center"
@@ -101,7 +102,7 @@ function Categories() {
                                 </Box>
                                 <Box
                                     gridColumn="span 1"
-                                    backgroundColor={colors.primary[200]}
+                                    backgroundColor={colors.primary[300]}
                                     display="flex"
                                     alignItems="center"
                                     justifyContent="center"
@@ -118,7 +119,7 @@ function Categories() {
                         gridColumn="span 3"
                     >
                         <Box height="70vh">
-                            <PieChart />
+                            <PieChart  />
                         </Box>
                     </Box>
                 </Box>
