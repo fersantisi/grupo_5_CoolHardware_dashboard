@@ -3,19 +3,19 @@ import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 
 
-function Products() {
+function Users() {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
-    const [products, setProducts] = useState([])
+    const [users, setUsers] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3030/apis/products')
+        fetch('http://localhost:3030/apis/users')
             .then((response) => {
                 return response.json()
             })
-            .then((products) => {
-                setProducts(products)
+            .then((users) => {
+                setUsers(users)
             })
     }, [])
 
@@ -27,7 +27,7 @@ function Products() {
                     gridTemplateColumns="repeat(10, 1fr)"
                     gridAutoRows="50px"
                     gap="10px"
-
+                    textAlign="center"
                 >
                     <Box
                         gridColumn="span 10"
@@ -58,16 +58,7 @@ function Products() {
                                 ID
                             </Box>
                             <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[400]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Marca
-                            </Box>
-                            <Box
-                                gridColumn="span 3"
+                                gridColumn="span 2"
                                 backgroundColor={colors.primary[400]}
                                 display="flex"
                                 alignItems="center"
@@ -76,13 +67,31 @@ function Products() {
                                 Nombre
                             </Box>
                             <Box
-                                gridColumn="span 1"
+                                gridColumn="span 2"
                                 backgroundColor={colors.primary[400]}
                                 display="flex"
                                 alignItems="center"
                                 justifyContent="center"
                             >
-                                Categoría
+                                Apellido
+                            </Box>
+                            <Box
+                                gridColumn="span 2"
+                                backgroundColor={colors.primary[400]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                Nombre de usuario
+                            </Box>
+                            <Box
+                                gridColumn="span 2"
+                                backgroundColor={colors.primary[400]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                E-Mail
                             </Box>
                             <Box
                                 gridColumn="span 1"
@@ -91,109 +100,65 @@ function Products() {
                                 alignItems="center"
                                 justifyContent="center"
                             >
-                                Stock
+                                Admin
                             </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[400]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Precio
-                            </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[400]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Descuento
-                            </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[400]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Oferta
-                            </Box>
+                            
                         </div>
 
                         <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            ID
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Marca
-                        </Box>
-                        <Box
-                            gridColumn="span 3"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Nombre
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Categoría
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Stock
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Precio
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Descuento
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Oferta
-                        </Box>
+                                gridColumn="span 1"
+                                backgroundColor={colors.primary[200]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                ID
+                            </Box>
+                            <Box
+                                gridColumn="span 2"
+                                backgroundColor={colors.primary[200]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                Nombre
+                            </Box>
+                            <Box
+                                gridColumn="span 2"
+                                backgroundColor={colors.primary[200]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                Apellido
+                            </Box>
+                            <Box
+                                gridColumn="span 2"
+                                backgroundColor={colors.primary[200]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                Nombre de usuario
+                            </Box>
+                            <Box
+                                gridColumn="span 2"
+                                backgroundColor={colors.primary[200]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                E-Mail
+                            </Box>
+                            <Box
+                                gridColumn="span 1"
+                                backgroundColor={colors.primary[200]}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                Admin
+                            </Box>
                         
                     </Box>
 
@@ -205,4 +170,4 @@ function Products() {
 
 }
 
-export default Products
+export default Users

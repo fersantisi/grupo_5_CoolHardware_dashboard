@@ -419,14 +419,14 @@ export const mockPieData = [
   {
     id: "lisp",
     label: "lisp",
-    value: 503,
+    value: 500,
     color: "hsl(229, 70%, 50%)",
   },
   {
     id: "scala",
     label: "scala",
-    value: 584,
-    color: "hsl(344, 70%, 50%)",
+    value: 504,
+    color: "hsl(300, 50%, 50%)",
   },
 ];
 

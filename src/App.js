@@ -4,14 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard/index";
-// import Team from "./scenes/team";
-// import Invoices from "./scenes/invoices";
-// import Contacts from "./scenes/contacts";
-// import Bar from "./scenes/bar";
-// import Form from "./scenes/form";
-// import Line from "./scenes/line";
-// import Pie from "./scenes/pie";
-// import Faq from "./scenes/faq";
+import ProductList from "./scenes/products/products"
+import CategoryList from "./scenes/categories/categories"
+import BrandList from "./scenes/brands/brands"
+import UserList from "./scenes/users/users"
+
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -20,19 +17,16 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <div className="app">
-          <Sidebar />
+        <Sidebar />
           <main className="content">
             <Topbar />
             <Routes>
               <Route path="/" exact={true} element={<Dashboard />} />
-              {/* <Route path="/team" element={<Team />} /> */}
-              {/* <Route path="/invoices" element={<Invoices />} /> */}
-              {/* <Route path="/contacts" element={<Contacts />} /> */}
-              {/* <Route path="/bar" element={<Bar />} /> */}
-              {/* <Route path="/form" element={<Form />} /> */}
-              {/* <Route path="/line" element={<Line />} /> */}
-              {/* <Route path="/pie" element={<Pie />} /> */}
-              {/* <Route path="/faq" element={<Faq />} /> */}
+              <Route path="/products" element={<ProductList />} />
+              <Route path="/categories" element={<CategoryList />} />
+              <Route path="/brands" element={<BrandList />} />
+              <Route path="/users" element={<UserList />} />
+             
             </Routes>
           </main>
         </div>
