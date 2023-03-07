@@ -79,51 +79,52 @@ function Categories() {
                                 Cantidad de productos
                             </Box>
                         </div>
-
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                ID
-                            </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Categoría
-                            </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                textAlign="center"
-                            >
-                                Cantidad de productos
-                            </Box>
-                            
+                        {categories.map((category, i) => (
+                            <>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {category.id}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {category.name}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    textAlign="center"
+                                >
+                                    {category.productCount}
+                                </Box>
+                            </>
+                        ))}
                     </Box>
 
 
-            <Box 
-                gridColumn="span 3"
-            >
-                <Box height="70vh">
-                    <PieChart />
-                </Box>
-            </Box>
+                    <Box
+                        gridColumn="span 3"
+                    >
+                        <Box height="70vh">
+                            <PieChart />
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
         </>
     );
-
 }
 
 export default Categories

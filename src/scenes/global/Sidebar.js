@@ -57,7 +57,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             
         }}
         >
-        <ProSidebar style={{top: "0px", bottom: "0px",}} collapsed={isCollapsed}>
+        <ProSidebar collapsed={isCollapsed}>
             <Menu iconShape="square">
             {/* LOGO AND MENU ICON */}
             <MenuItem
@@ -72,7 +72,6 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
                   display="flex"
                   justifyContent="space-between"
                   alignItems="center"
-                  // ml="15px"
                 >
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                     <MenuOutlinedIcon />

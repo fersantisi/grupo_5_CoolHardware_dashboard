@@ -121,80 +121,82 @@ function Products() {
                                 Oferta
                             </Box>
                         </div>
-
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            ID
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Marca
-                        </Box>
-                        <Box
-                            gridColumn="span 3"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Nombre
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Categoría
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Stock
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Precio
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Descuento
-                        </Box>
-                        <Box
-                            gridColumn="span 1"
-                            backgroundColor={colors.primary[200]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            Oferta
-                        </Box>
-                        
+                        {products.map((product, i) => (
+                            <>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.id}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.brand.name}
+                                </Box>
+                                <Box
+                                    gridColumn="span 3"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.name}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.category.name}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.stock}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.price}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.discount}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {product.price - product.price * product.discount / 100}
+                                </Box>
+                            </>
+                        ))}
                     </Box>
 
 

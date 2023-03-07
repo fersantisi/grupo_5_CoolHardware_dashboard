@@ -102,64 +102,67 @@ function Users() {
                             >
                                 Admin
                             </Box>
-                            
-                        </div>
 
-                        <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                ID
-                            </Box>
-                            <Box
-                                gridColumn="span 2"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Nombre
-                            </Box>
-                            <Box
-                                gridColumn="span 2"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Apellido
-                            </Box>
-                            <Box
-                                gridColumn="span 2"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Nombre de usuario
-                            </Box>
-                            <Box
-                                gridColumn="span 2"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                E-Mail
-                            </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Admin
-                            </Box>
-                        
+                        </div>
+                        {users.map((user, i) => (
+                            <>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {user.id}
+                                </Box>
+                                <Box
+                                    gridColumn="span 2"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {user.first_name}
+                                </Box>
+                                <Box
+                                    gridColumn="span 2"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {user.last_name}
+                                </Box>
+                                <Box
+                                    gridColumn="span 2"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {user.nickname}
+                                </Box>
+                                <Box
+                                    gridColumn="span 2"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {user.email}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {user.admin}
+                                </Box>
+                            </>
+                        ))}
+
                     </Box>
 
 

@@ -79,35 +79,38 @@ function Brands() {
                                 Cantidad de productos
                             </Box>
                         </div>
-
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                ID
-                            </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                Marca
-                            </Box>
-                            <Box
-                                gridColumn="span 1"
-                                backgroundColor={colors.primary[200]}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                textAlign="center"
-                            >
-                                Cantidad de productos
-                            </Box>
+                        {brands.map((brand, i) => (
+                            <>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {brand.id}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                >
+                                    {brand.name}
+                                </Box>
+                                <Box
+                                    gridColumn="span 1"
+                                    backgroundColor={colors.primary[200]}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    textAlign="center"
+                                >
+                                    {brand.productCount}
+                                </Box>
+                            </>
+                        ))}
                             
                     </Box>
 
