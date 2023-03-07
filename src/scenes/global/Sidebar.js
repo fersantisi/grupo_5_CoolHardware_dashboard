@@ -41,6 +41,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
         sx={{
             "& .pro-sidebar-inner": {
             background: `${colors.primary[400]} !important`,
+            height: "150%"
             },
             "& .pro-icon-wrapper": {
             backgroundColor: "transparent !important",
@@ -54,6 +55,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             "& .pro-menu-item.active": {
             color: `${colors.blueAccent[400]} !important`,
             },
+            
         }}
         >
         <ProSidebar collapsed={isCollapsed}>
